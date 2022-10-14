@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <a href="#"><img src="images/bookIcon.png" alt="book icon"></a>
-        <h1 class="header-logo">The Library</h1>
+        <h1 class="header-logo">Library</h1>
     </header>
 
 
@@ -25,11 +25,18 @@
             <button id="add-button">Add Book</button>
             <h2>Your Collection:</h2>
         </div>
+        <div class="add-book-card">
+            <form class="add-book-form">
+                <label for="title">Title: <input type="text" name="title" id="title"></label>
+                <label for="author">Author: <input type="text" name="author" id="author"></label>
+                <label for="pages">Pages: <input type="number" name="pages" id="pages"></label>
+                <button type="button" class="red">Not read</button>
+                <button id="add" type="button">Add</button>
+            </form>
+        </div>
         <div id="books">
 
         </div>
-
-        
     </main>
 
 
