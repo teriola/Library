@@ -1,4 +1,4 @@
-/*-----------------GENERAL-----------------*/
+/*-----------------GENERAL----------------------------------------------------------------*/
 *,
 *::after,
 *::before {
@@ -17,6 +17,9 @@
 
 body {
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 button {
@@ -27,9 +30,7 @@ button {
     border: none;
 }
 
-
-
-/*-----------------HEADER-----------------*/
+/*-----------------HEADER----------------------------------------------------------------*/
 .header {
     width: 100%;
     height: 60px;
@@ -37,6 +38,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .header-logo {
@@ -53,17 +55,14 @@ button {
     width: 40px;
 }
 
-
-
-
-
-/*-----------------MAIN-----------------*/
+/*-----------------MAIN---------------------------------------------------------------------------*/
 .main {
     width: 100%;
     background-color: var(--grey);
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 0 auto;
     padding: 1rem;
 }
 
@@ -90,7 +89,7 @@ button {
     flex-wrap: wrap;
 }
 
-/*-----------------INPUT-CARD-----------------*/
+/*-----------------INPUT-CARD---------------------------------------------------------*/
 .add-book-card {
     position: absolute;
     display: none;
@@ -113,7 +112,7 @@ button {
     margin-bottom: 60px;
 }
 
-.red {
+.is-read-button {
     background-color: var(--red);
 }
 
@@ -136,12 +135,7 @@ input {
     background-color: var(--grey);
 }
 
-
-
-
-
-
-/*-----------------CARD-CONTENT-----------------*/
+/*-----------------CARD-CONTENT----------------------------------------------------------*/
 
 .card {
     width: 200px;
@@ -160,13 +154,13 @@ input {
     margin-bottom: 7 px;
 }
 
-
-
-/*-----------------FOOTER-----------------*/
+/*-----------------FOOTER--------------------------------------------------------------*/
 .footer {
     width: 100%;
     height: 40px;
     background-color: var(--grey);
+    flex-shrink: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,9 +174,12 @@ input {
     width: 25px;
 }
 
-/*-----------------MEDIA-QUERIES-----------------*/
-@media only screen and (max-width: 600px) {
-    #add-button {
-        width: 170px;
+/*-----------------MEDIA-QUERIES----------------------------------------------------------*/
+@media only screen and (max-width: 466px) {
+    /* .card{
+        transform: scale(.6);
+    } */
+    #books{
+        gap: 4px;
     }
 }
